@@ -1,4 +1,4 @@
-export RPD = "~/projects/rust/"
+export RPD=~/projects/rust
 __rust_codium() {
     codium . src/*.rs Cargo.toml
 }
@@ -35,7 +35,7 @@ Return Codes:
 "
 
 rust() {
-    echo "Running 'rust'"
+    # echo "Running 'rust'"
     case $1 in
         new) # rust new bin/lib [name]
             if test -d "$RPD/$3"; then
@@ -93,7 +93,7 @@ rust() {
         ;;
         list) # rust list
             cd $RPD
-            ls -d */
+            ls -D
             cd - >/dev/null
         ;;
         help) # rust help
